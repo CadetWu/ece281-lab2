@@ -63,12 +63,12 @@ architecture sevenSegDecoder_arch of sevenSegDecoder is
 	
   -- declare the component of your top-level design unit under test (UUT)
   -- declare the component of your top-level design unit under test (UUT)
-  component sevenSegDecoder is
-    port(
-       i_D : in std_logic_vector (3 downto 0);
-       o_S : out std_logic_vector (6 downto 0)
-    );    
-  end component;
+  --component sevenSegDecoder is
+    --port(
+      -- i_D : in std_logic_vector (3 downto 0);
+       --o_S : out std_logic_vector (6 downto 0)
+    --);    
+  --end component;
        
     signal c_Sa: std_logic:= '1';
     signal c_Sb: std_logic:= '1';
