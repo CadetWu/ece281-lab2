@@ -94,21 +94,21 @@ architecture top_basys3_arch of top_basys3 is
 begin
  
 	-- CONCURRENT STATEMENTS ----------------------------
-    sevenSegDecoder_inst : sevenSegDecoder port map (
+    --sevenSegDecoder_inst : sevenSegDecoder port map (
       -- use comma (not a semicolon)
       -- no comma on last line
-      i_D(0) => w_sw(0),
-      i_D(1) => w_sw(1),
-      i_D(2) => w_sw(2),
-      i_D(3) => w_sw(3),
-      o_S(0) => w_seg(0),
-      o_S(1) => w_seg(1),
-      o_S(2) => w_seg(2),
-      o_S(3) => w_seg(3),
-      o_S(4) => w_seg(4),
-      o_S(5) => w_seg(5),
-      o_S(6) => w_seg(6)
-    );
+   --   i_D(0) => w_sw(0),
+     -- i_D(1) => w_sw(1),
+     -- i_D(2) => w_sw(2),
+      --i_D(3) => w_sw(3),
+      --o_S(0) => w_seg(0),
+      --o_S(1) => w_seg(1),
+      --o_S(2) => w_seg(2),
+      --o_S(3) => w_seg(3),
+      --o_S(4) => w_seg(4),
+      --o_S(5) => w_seg(5),
+      --o_S(6) => w_seg(6)
+    --);
 	-- wire up active-low 7SD anode (active low) to button (active-high)
 	-- display 7SD 0 only when button pushed
 	-- other 7SD are kept off
