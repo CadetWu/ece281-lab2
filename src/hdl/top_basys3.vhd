@@ -88,11 +88,17 @@ architecture top_basys3_arch of top_basys3 is
     
     signal w_7SD_EN_n: std_logic;
 
-    
+  signal w_sw : std_logic_vector (3 downto 0);
+  signal w_seg : std_logic_vector (6 downto 0);
 begin
  
 	-- CONCURRENT STATEMENTS ----------------------------
-	
+    sevenSegDecoder_inst : sevenSegDecoder port map (
+      -- use comma (not a semicolon)
+      -- no comma on last line
+      i_D => w_sw,
+      o_S => w_seg
+    );
 	-- wire up active-low 7SD anode (active low) to button (active-high)
 	-- display 7SD 0 only when button pushed
 	-- other 7SD are kept off
