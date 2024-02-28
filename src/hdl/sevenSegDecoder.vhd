@@ -63,11 +63,11 @@ architecture sevenSegDecoder_arch of sevenSegDecoder is
 	
   -- declare the component of your top-level design unit under test (UUT)
   -- declare the component of your top-level design unit under test (UUT)
-  --component sevenSegDecoder is
-    --port(
-      -- i_D : in std_logic_vector (3 downto 0);
+ -- component sevenSegDecoder is
+   -- port(
+     --  i_D : in std_logic_vector (3 downto 0);
        --o_S : out std_logic_vector (6 downto 0)
-    --);    
+   -- );    
   --end component;
        
     signal c_Sa: std_logic:= '1';
@@ -84,13 +84,13 @@ begin
 	-- PORT MAPS ----------------------------------------
     -- map ports for any component instances (port mapping is like wiring hardware)
 
-    o_S(0) <= c_Sa;
-    o_S(1) <= c_Sb;
-    o_S(2) <= c_Sc;
+    o_S(6) <= c_Sa;
+    o_S(5) <= c_Sb;
+    o_S(4) <= c_Sc;
     o_S(3) <= c_Sd;
-    o_S(4) <= c_Se;
-    o_S(5) <= c_Sf;
-    o_S(6) <= c_Sg;
+    o_S(2) <= c_Se;
+    o_S(1) <= c_Sf;
+    o_S(0) <= c_Sg;
     
     c_Sa <= '1' when( (i_D = "1100") or
                       (i_D = "1101") or
