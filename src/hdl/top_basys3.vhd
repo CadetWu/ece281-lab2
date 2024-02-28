@@ -90,11 +90,7 @@ architecture top_basys3_arch of top_basys3 is
 
     
 begin
-    sevenSegDecoder_inst: sevenSegDecoder
-    port map(
-            i_D => sw,
-            o_S => seg
-            );    
+ 
 	-- CONCURRENT STATEMENTS ----------------------------
 	
 	-- wire up active-low 7SD anode (active low) to button (active-high)
