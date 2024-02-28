@@ -57,7 +57,7 @@
 library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
-
+  
 
 entity top_basys3 is
 	port(
@@ -76,39 +76,25 @@ entity top_basys3 is
 	);
 end top_basys3;
 
+
 architecture top_basys3_arch of top_basys3 is 
-
-  -- declare the component of your top-level design unit under test (UUT)
+    
     component sevenSegDecoder is
-        Port (
-              D: in std_logic_vector(3 downto 0);
-              o_S: out std_logic_vector(6 downto 0)
-             );
+      port(
+         i_D : in std_logic_vector (3 downto 0);
+         o_S : out std_logic_vector (6 downto 0)
+      );    
     end component sevenSegDecoder;
-  -- create wire to connect button to 7SD enable (active-low)
-	signal w_7SD_EN_n: std_logic;
+    
+    signal w_7SD_EN_n: std_logic;
 
+    
 begin
-	-- PORT MAPS ----------------------------------------
     sevenSegDecoder_inst: sevenSegDecoder
-        port map(
-            D(0)    => sw(0),
-            D(1)    => sw(1),
-            D(2)    => sw(2),
-            D(3)    => sw(3),
-            o_S(0)  => seg(0), 
-            o_S(1)  => seg(1), 
-            o_S(2)  => seg(2), 
-            o_S(3)  => seg(3), 
-            o_S(4)  => seg(4), 
-            o_S(5)  => seg(5), 
-            o_S(6)  => seg(6)
-        );
-        
-     
-	--	Port map: wire your component up to the switches and seven-segment display cathodes
-	-----------------------------------------------------	
-	
+    port map(
+            i_D => sw,
+            o_S => seg
+            );    
 	-- CONCURRENT STATEMENTS ----------------------------
 	
 	-- wire up active-low 7SD anode (active low) to button (active-high)
@@ -122,7 +108,4 @@ begin
     an(2)   <= '1';
     an(3)   <= '1';
     
-    --Sa
-	o_S(0) <=  '0' when ((not D(3) and not D(2) and D(0)) or (not D(3) and D(1) and D(0)));
-
 end top_basys3_arch;
