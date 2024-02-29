@@ -1,0 +1,294 @@
+
+*** Running vivado
+    with args -log top_basys3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_basys3.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top_basys3.tcl -notrace
+Command: synth_design -top top_basys3 -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23260 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 333.758 ; gain = 100.234
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_basys3' [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:80]
+INFO: [Synth 8-3491] module 'sevenSegDecoder' declared at 'C:/Users/Brendan.Wu/Documents/sevenSegDecoder.vhd:54' bound to instance 'sevenSegDecoder_inst' of component 'sevenSegDecoder' [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'sevenSegDecoder' [C:/Users/Brendan.Wu/Documents/sevenSegDecoder.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'sevenSegDecoder' (1#1) [C:/Users/Brendan.Wu/Documents/sevenSegDecoder.vhd:62]
+WARNING: [Synth 8-3848] Net seg in module/entity top_basys3 does not have driver. [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:65]
+WARNING: [Synth 8-3848] Net w_sw in module/entity top_basys3 does not have driver. [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'top_basys3' (2#1) [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:80]
+WARNING: [Synth 8-3917] design top_basys3 has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_basys3 has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_basys3 has port an[1] driven by constant 1
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[6]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[5]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[4]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[3]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[2]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[1]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[0]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[3]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[2]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[1]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 389.109 ; gain = 155.586
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin sevenSegDecoder_inst:i_D[3] to constant 0 [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:97]
+WARNING: [Synth 8-3295] tying undriven pin sevenSegDecoder_inst:i_D[2] to constant 0 [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:97]
+WARNING: [Synth 8-3295] tying undriven pin sevenSegDecoder_inst:i_D[1] to constant 0 [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:97]
+WARNING: [Synth 8-3295] tying undriven pin sevenSegDecoder_inst:i_D[0] to constant 0 [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/top_basys3.vhd:97]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 389.109 ; gain = 155.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 389.109 ; gain = 155.586
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Brendan.Wu/Documents/ece281-lab2/src/hdl/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_basys3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 627.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 627.242 ; gain = 393.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 627.242 ; gain = 393.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 627.242 ; gain = 393.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 627.242 ; gain = 393.719
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design top_basys3 has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_basys3 has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_basys3 has port an[1] driven by constant 1
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[6]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[5]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[4]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[3]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[2]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[1]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port seg[0]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[3]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[2]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[1]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 627.242 ; gain = 393.719
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 691.277 ; gain = 457.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 691.277 ; gain = 457.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 691.539 ; gain = 458.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     1|
+|2     |IBUF  |     1|
+|3     |OBUF  |     4|
+|4     |OBUFT |     7|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    13|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.738 ; gain = 459.215
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 692.777 ; gain = 221.121
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 692.777 ; gain = 459.254
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 708.449 ; gain = 487.664
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Brendan.Wu/Documents/ece281-lab2/binaryHexDisp/binaryHexDisp.runs/synth_1/top_basys3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_basys3_utilization_synth.rpt -pb top_basys3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 708.449 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 28 14:49:15 2024...
